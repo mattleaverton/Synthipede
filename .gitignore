@@ -1,16 +1,6 @@
-Library/AssetImportState
-Library/AssetServerCacheV3
-Library/FailedAssetImports.txt
-Library/ScriptAssemblies
-Library/assetDatabase3
-Library/cache
-Library/expandedItems
-Library/previews
-Library/guidmapper
-Library/InspectorExpandedItems.asset
-Library/metadata
-Library/ScriptMapper
+Unity/Library/
 /Temp
+
 
 *.csproj
 *.unityproj
