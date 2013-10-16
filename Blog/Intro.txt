@@ -1,0 +1,26 @@
+Intro
+This semester I am embarking on a creative project to fulfill the requirements necessary to obtain a certificate in Digital Arts and Media through the Bridging Disciplines Program (BDP) at the University of Texas at Austin. The BDP at UT provides the opportunity for students within any major to earn a certificate in interdisciplinary studies spread among 11 concentrations. I chose Digital Arts and Media to add an element of film/music/creativity to my major of Electrical/Computer Engineering. The conclusion of this program depends on a creative project that bridges my disciplines and is a culmination of what I have learned through the process.
+
+The Problem
+To meet the requirements of the project, I am to have two professors mentor me through a semester long project that will showcase my skills and bridge disciplines. This semester I am taking Intro to Computer Music (MUS329J) which covers the use of Max/MSP for music making and in the 2D Video Game Capstone in which teams develop 2D games using Unity3D. Taking this into account and my programming experience from EE, I chose to bridge the disciplines of electrical engineering (programming side), art (video games), and music (music, obviously) to create a video game with an interactive soundtrack. 
+
+Background
+The base of the project will be created in Unity3D, which is a video game engine that has been made available for free (with a few limitations and features missing). Unity is a very powerful and capable engine with lots of built in tools to make basic video game design accessible to amateurs like me. This coupled with the price (free), loads of documentation, copious instructional videos, the fact that I'm using this in a class, and an extremely vibrant community make this the obvious choice for simple video game development. Additionally, everything can be extended, controlled and customized by using Javascript and/or C# which makes this a good learning experience (seeing as I do not know too much of either). This way I can make just about anything happen that I need to happen as far as the game goes. 
+
+Typically, video game music has been reasonably static. When your character makes a move or action, a corresponding sound plays and in one area, this song plays, in the next area, this song plays. This follows the basic structure of film audio which is a linear medium and this methodology is well-established in the minds of every human being. One particular draw of video games is the dynamic nature of the play - everything changes depending upon the actions and movements of the player. Most recent video games have reactive elements depending on the state of the game (danger vs. safety and such) and naturally have sound effects and atmospheric noise. But most games do not take advantage of the flexibility of the medium to provide an audio experience to the user that is unique as their style of play. The computer game Spore released by Maxis begins to delve into the massive realm of possibilities that is procedural video game audio. Game designer Will Wright worked with electronic composer/producer Brian Eno to adapt Pure Data (PD) (a visual programming language conducive for work in sound synthesis and interactive composition) to create a soundtrack that generated based on the player's actions, choices, and style of play.
+
+Max/MSP (hereafter referred to as simply Max) is the commercial version of PD and as I mentioned earlier, I am in a class for this software and intend to use it to process game data from Unity to generate a soundtrack. Max is an incredibly powerful program that can be used for all sorts of data and audio manipulation, signal processing, sound synthesis, interactive music creation, and so much more. 
+
+
+The Particulars
+I am exploring the art of procedural sound in video games by creating a simple video game in Unity3D where the actions of a character are sent to Max/MSP and processed to create a soundtrack that is fully dependent upon character interaction. The game itself isn't set in stone yet, but will involve a controllable character who is interacting with the world to manipulate audio. This is going to be developing over the next month and a half or so. 
+
+Further Reading
+http://www.utexas.edu/ugs/bdp/programs/dam
+http://gamedev.utexas.edu/
+http://ems.music.utexas.edu/program/mus329j/
+http://www.gamespot.com/articles/a-history-of-video-game-music/1100-6092391/
+http://createdigitalmusic.com/2007/06/brian-eno-with-wright-on-spore-and-generative-systems-sound-and-paintings/
+http://www.uni-weimar.de/medien/wiki/images/Usage_of_Pd_in_Spore_and_Darkspore.pdf
+http://www.obiwannabe.co.uk/tutorials/html/intro_games_synthesis.html
+http://www.videogameaudio.com/
