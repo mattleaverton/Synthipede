@@ -35,17 +35,17 @@ void Update ()
 		
 			if(udpOutScript)
 			{
-				if(wPressed == 1){
-					udpOutScript.SendInt(wButton, 1 );
+				if(wPressed != 0){
+					udpOutScript.SendInt(wButton, wPressed );
 				}
-				if(aPressed == 1){
-					udpOutScript.SendInt(aButton, 1 );
+				if(aPressed != 0){
+					udpOutScript.SendInt(aButton, aPressed );
 				}
-				if(sPressed == 1){
-					udpOutScript.SendInt(sButton, 1 );
+				if(sPressed != 0){
+					udpOutScript.SendInt(sButton, sPressed );
 				}
-				if(dPressed == 1){
-					udpOutScript.SendInt(dButton, 1 );
+				if(dPressed != 0){
+					udpOutScript.SendInt(dButton, dPressed );
 				}
 			}
 		
