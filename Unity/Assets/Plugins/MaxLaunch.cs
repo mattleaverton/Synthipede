@@ -22,33 +22,26 @@ public class MaxLaunch : MonoBehaviour
 	private UdpOut udpOutScript;
 	
 	
-	void Start ()
-	{
+	void Start () {
 		// Find the UdpOut and assign it
 		udpOutScript = (UdpOut)FindObjectOfType (typeof(UdpOut));
 	}
-	
-	
 
-void Update ()
-	{
-		
-			if(udpOutScript)
-			{
-				if(wPressed != 0){
-					udpOutScript.SendInt(wButton, wPressed );
-				}
-				if(aPressed != 0){
-					udpOutScript.SendInt(aButton, aPressed );
-				}
-				if(sPressed != 0){
-					udpOutScript.SendInt(sButton, sPressed );
-				}
-				if(dPressed != 0){
-					udpOutScript.SendInt(dButton, dPressed );
-				}
+	void Update () {
+		if(udpOutScript)
+		{
+			if(wPressed != 0){
+				udpOutScript.SendInt(wButton, wPressed );
 			}
-		
-		
+			if(aPressed != 0){
+				udpOutScript.SendInt(aButton, aPressed );
+			}
+			if(sPressed != 0){
+				udpOutScript.SendInt(sButton, sPressed );
+			}
+			if(dPressed != 0){
+				udpOutScript.SendInt(dButton, dPressed );
+			}
+		}
 	}
 }

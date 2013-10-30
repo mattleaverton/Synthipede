@@ -1,0 +1,5 @@
+In this update, I created a basic game with a character controller so that I could begin to experiment with methods of tracking the user. I followed (roughly) the video tutorial here (http://cgcookie.com/unity/2011/12/05/introduction-to-character-controllers/) to create a basic terrain and a character controller to walk around in it.
+
+In following with the example laid forth in the middleware discussed in the last post, I assigned a couple scripts to some empty game objects to initiate UDP communication and to enable the gathering and sending of important information from Unity. The UDP communication script is directly from that project and the other scripts are heavily derivative at this time (for testing purposes). 
+
+In the following script
