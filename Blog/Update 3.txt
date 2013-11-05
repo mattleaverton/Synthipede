@@ -1,0 +1,10 @@
+Brainstorming for where this can go/how I can track the user/parameters I can use to generate music:
+
+Use Max/MSP wind machine to create wind noises
+
+have large field that music changes depending on where you walk
+- vector synthesis?
+     - where you are determines the sound
+     - chords playing in the background through the synth being controlled
+     - chords change with time
+some notes tied to footsteps
