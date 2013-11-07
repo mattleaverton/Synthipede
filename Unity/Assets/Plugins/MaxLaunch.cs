@@ -9,6 +9,7 @@ public class MaxLaunch : MonoBehaviour
 	public string aButton = "keyA";
 	public string sButton = "keyS";
 	public string dButton = "keyD";
+	public string piano = "piano";
 	
 	public static int sendValueToMax = 0;
 	public static int wPressed = 0;
@@ -16,6 +17,7 @@ public class MaxLaunch : MonoBehaviour
 	public static int sPressed = 0;
 	public static int dPressed = 0;
 	public static int spaceCount = 0;
+	public static int pianoKey = 0;
 			
 			
 	// UDPOut script;
@@ -41,6 +43,10 @@ public class MaxLaunch : MonoBehaviour
 			}
 			if(dPressed != 0){
 				udpOutScript.SendInt(dButton, dPressed );
+			}
+			if(pianoKey != 0){
+				udpOutScript.SendInt (piano, pianoKey);
+				pianoKey = 0;
 			}
 		}
 	}
