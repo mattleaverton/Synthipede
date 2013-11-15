@@ -11,6 +11,6 @@ function Update () {
 	MaxLaunch.rotX = (transform.rotation.x) * 100;
 	MaxLaunch.rotY = (transform.localEulerAngles.y);
 	MaxLaunch.rotZ = (transform.localEulerAngles.z);
-	Debug.Log(transform.localEulerAngles.y);
+//	Debug.Log(transform.localEulerAngles.y);
 
 }

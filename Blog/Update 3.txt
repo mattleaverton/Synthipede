@@ -1,25 +1,42 @@
-Brainstorming for where this can go/how I can track the user/parameters I can use to generate music:
+The major change I made in this update was the addition of a day/night cycle to the game. The game now has a sun that rotates periodically (day length specified by the user) and the day and night sky transition nicely. I followed this <a href="http://www.burgzergarcade.com/tutorials/game-engines/unity3d/072-unity3d-tutorial-day-night-cycle-part-1" title="Burg Zerg Arcade" target="_blank">lovely tutorial set</a> from Burg Zerg Arcade (they have a lot of awesome tutorials for Unity). 
 
-Use Max/MSP wind machine to create wind noises
+<a href="http://www.mattleaverton.com/wp-content/uploads/2013/11/3_day.png"><img src="http://www.mattleaverton.com/wp-content/uploads/2013/11/3_day-1024x640.png" alt="3_day" width="620" height="387" class="alignnone size-large wp-image-78" /></a>
+Probably the largest portion (at least the greatest visual impact) of this effect is the transition of the day to night sky which is based on a <a href="http://wiki.unity3d.com/index.php?title=SkyboxBlended" target="_blank">community compiled shader</a> that makes this possible. This allows you to take a traditionally static <a href="http://en.wikipedia.org/wiki/Skybox_(video_games)" target="_blank">skybox</a> and blend between two different sets of images. In this case, you can have a lovely day sky and a nice set of stars and blend between the two of them based on the time of day for a really cool effect.
+ 
+I also now have a sun that rotates around the world, giving both light and a sense of time. This is also from the cool previously mentioned tutorial. Soon I will be adding a moon so that the night time has a light source as well. The day/night cycle times will control different music for night and day so that the audio matches the visuals.
 
-have large field that music changes depending on where you walk
-- vector synthesis?
+<a href="http://www.mattleaverton.com/wp-content/uploads/2013/11/3_piano.png"><img src="http://www.mattleaverton.com/wp-content/uploads/2013/11/3_piano.png" alt="3_piano" width="1019" height="350" class="alignnone size-full wp-image-82" /></a>
+
+From the music side of things, I added a large playable piano. The player can play a tune when they run around on the keys. Nothing too fancy going on here, just triggers being sent to Max based on which key has been collided with. From the tracking side of things, Max now is tracking the XYZ position of the player and the rotation of the view. 
+
+<a href="http://www.mattleaverton.com/wp-content/uploads/2013/11/3_max.png"><img src="http://www.mattleaverton.com/wp-content/uploads/2013/11/3_max-1024x602.png" alt="3_max" width="620" height="364" class="alignnone size-large wp-image-79" /></a>
+
+Lastly, for fun I played with making different terrains by creating height-maps in Photoshop. You can create some really amazing landscapes with a few clicks and by changing colors. A height-map is a simple black and white image where white corresponds to the highest height and black corresponds to the lowest depth. Any fade or gradient comes out as a hill or ramp. I followed some of the tutorials and instructions by <a href="http://www.jasonsturges.com/2012/12/creating-a-terrain-for-unity-3d-with-photoshop/">Jason Sturges</a> to pretty exciting results.
+
+<a href="http://www.mattleaverton.com/wp-content/uploads/2013/11/3_terrain.png"><img src="http://www.mattleaverton.com/wp-content/uploads/2013/11/3_terrain.png" alt="3_terrain" width="976" height="484" class="alignnone size-full wp-image-83" /></a>
+
+I also wanted to share some of the brainstorming I have been doing for where this can go/how I can track the user/parameters I can use to generate music:
+
+Create wind noises using a Max/MSP wind generator I made for class
+
+Have large field that music changes depending on where you walk
+- <a href="http://en.wikipedia.org/wiki/Vector_synthesis" target="_blank">vector synthesis</a>
   - where you are determines the sound
   - chords playing in the background through the synth being controlled
   - chords change with time
 
-some notes tied to footsteps
+Some notes tied to footsteps
   - not often enough as to be annoying
   - enough as to give the idea of walking
 
-manipulate objects to create new sounds
+Manipulate objects to create new sounds
   - spawning certain objects to create music
   - rolling balls around in a half-pipe or ramp to generate periodic signals
-  - 
 
-Have a piano on the ground somewhere
-
-
-
-http://www.burgzergarcade.com/tutorials/game-engines/unity3d/072-unity3d-tutorial-day-night-cycle-part-1
-http://wiki.unity3d.com/index.php?title=SkyboxBlended
+Parameters that can be controlled by the user
+- position in vector synthesis
+- frequencies of carrier or modulator waves
+     - both AM and FM
+- time between chord changes
+- key of the main music
+- density of texture for <a href="http://en.wikipedia.org/wiki/Granular_synthesis" target="_blank">granular synthesis</a>
