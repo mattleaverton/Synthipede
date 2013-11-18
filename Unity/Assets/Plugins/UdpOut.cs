@@ -25,6 +25,12 @@ public class UdpOut : MonoBehaviour
 		SendBytes( messageBytes );
 	}
 	
+	public void SendArray(string routeString, int[] musMat)
+	{
+		string message = routeString + " " + musMat;
+		byte[] messageBytes = byteEncoder.GetBytes ( message );
+		SendBytes ( messageBytes );
+	}
 	
 	private void SendBytes( byte[] message )
 	{
