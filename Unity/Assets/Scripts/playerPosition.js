@@ -1,8 +1,6 @@
 ﻿#pragma strict
 
-function Start () {
-
-}
+var respawnPosition : Vector3;
 
 function Update () {
 	MaxLaunch.charX = (transform.position.x);
@@ -13,4 +11,10 @@ function Update () {
 	MaxLaunch.rotZ = (transform.localEulerAngles.z);
 //	Debug.Log(transform.localEulerAngles.y);
 
+
+	if(transform.position.y < -1){
+		transform.position.x = respawnPosition.x;
+		transform.position.y = respawnPosition.y;
+		transform.position.z = respawnPosition.z;
+	}
 }
