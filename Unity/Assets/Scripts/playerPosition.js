@@ -12,7 +12,7 @@ function Update () {
 //	Debug.Log(transform.localEulerAngles.y);
 
 
-	if(transform.position.y < -1){
+	if(transform.position.y < -1 || transform.position.y > 130){
 		transform.position.x = respawnPosition.x;
 		transform.position.y = respawnPosition.y;
 		transform.position.z = respawnPosition.z;

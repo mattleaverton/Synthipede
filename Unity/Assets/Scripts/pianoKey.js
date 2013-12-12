@@ -1,11 +1,14 @@
 ﻿#pragma strict
 
-var keyNumber : int = 0;
+private var transmit : UdpOut;
+
+function Start () {
+	transmit = FindObjectOfType(UdpOut);
+}
+
+public var keyNumber : int = 0;
+public var piano : String = "piano";
 
 function OnCollisionEnter(){
-//	if(theCollision.gameObject.name == "FPC"){
-		MaxLaunch.pianoKey = keyNumber;
-		//Debug.Log("Hey!");
-//	}
-
+	transmit.SendInt(piano, keyNumber);
 }

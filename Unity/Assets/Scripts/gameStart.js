@@ -1,48 +1,51 @@
 ﻿#pragma strict
-
-function Awake(){
-	MaxLaunch.sendValueToMax = 1; 
 	
-	}
-function Start () {
+private var transmit : UdpOut;
 
+function Start () {
+	transmit = FindObjectOfType(UdpOut);
 }
+
+public var wButton : String = "control keyW";
+public var aButton : String = "control keyA";
+public var sButton : String = "control keyS";
+public var dButton : String = "control keyD";
+public var spaceBar : String = "control space";
 
 function Update () {
 
-	if(Input.GetKeyDown(KeyCode.W)){
+	/*if(Input.GetKeyDown(KeyCode.W)){
 		MaxLaunch.wPressed = 1;
 	} else if (Input.GetKeyUp(KeyCode.W)){
 		MaxLaunch.wPressed = 2;
 	} else{
 		MaxLaunch.wPressed = 0;
+	}*/
+	if(Input.GetKeyDown(KeyCode.W)){
+		transmit.SendInt(wButton, 1);
+	} else if (Input.GetKeyUp(KeyCode.W)){
+		transmit.SendInt(wButton, 0);
 	}
 	if(Input.GetKeyDown(KeyCode.A)){
-		MaxLaunch.aPressed = 1;
+		transmit.SendInt(aButton, 1);
 	} else if (Input.GetKeyUp(KeyCode.A)){
-		MaxLaunch.aPressed = 2;
-	} else{
-		MaxLaunch.aPressed = 0;
-	}
+		transmit.SendInt(aButton, 0);
+	} 
 	if(Input.GetKeyDown(KeyCode.S)){
-		MaxLaunch.sPressed = 1;
+		transmit.SendInt(sButton, 1);
 	} else if (Input.GetKeyUp(KeyCode.S)){
-		MaxLaunch.sPressed = 2;
-	} else{
-		MaxLaunch.sPressed = 0;
+		transmit.SendInt(sButton, 0);
 	}
 	if(Input.GetKeyDown(KeyCode.D)){
-		MaxLaunch.dPressed = 1;
+		transmit.SendInt(dButton, 1);
 	} else if (Input.GetKeyUp(KeyCode.D)){
-		MaxLaunch.dPressed = 2;
-	} else{
-		MaxLaunch.dPressed = 0;
-	}
-	if(Input.GetKeyDown(KeyCode.Q))
-	{
-		MaxLaunch.sendValueToMax = 0;
-		Application.Quit();
-	}
+		transmit.SendInt(dButton, 0);
+	} 
+	if(Input.GetKeyDown(KeyCode.Space)){
+		transmit.SendInt(spaceBar, 1);
+	} else if (Input.GetKeyUp(KeyCode.Space)){
+		transmit.SendInt(spaceBar, 0);
+	} 
 	
 
 }
